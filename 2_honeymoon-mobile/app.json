@@ -1,0 +1,13 @@
+{
+  "name": "HoneyMoonApp",
+  "displayName": "HoneyMoon",
+  "version": "1.0.0",
+  "description": "Wedding & Event Planning Platform — UAE",
+  "ios": {
+    "bundleIdentifier": "com.honeymoon.app",
+    "supportsTablet": true
+  },
+  "android": {
+    "package": "com.honeymoon.app"
+  }
+}

@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: #161120; }
+  ::-webkit-scrollbar-thumb { background: #C6A85C40; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #C6A85C; }
+  input, select, textarea {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(198,168,92,0.2);
+    border-radius: 8px;
+    color: #FAF6EE;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 9px 13px;
+    outline: none;
+    transition: border 0.2s;
+  }
+  input:focus, select:focus, textarea:focus { border-color: #C6A85C; }
+  input::placeholder, textarea::placeholder { color: #8A7A9A; }
+  select option { background: #161120; }
+}
+
+@layer components {
+  .gold-btn {
+    @apply bg-gradient-to-r from-gold to-goldl text-dark font-semibold text-xs tracking-widest uppercase px-5 py-2.5 rounded-lg cursor-pointer transition-all hover:opacity-90 hover:-translate-y-px;
+  }
+  .ghost-btn {
+    @apply bg-transparent border border-gold/40 text-gold font-medium text-xs tracking-wide uppercase px-4 py-2 rounded-lg cursor-pointer transition-all hover:bg-gold/10 hover:border-gold;
+  }
+  .red-btn {
+    @apply bg-transparent border border-red-500/40 text-red-400 font-medium text-xs px-4 py-2 rounded-lg cursor-pointer transition-all hover:bg-red-500/10;
+  }
+  .card {
+    @apply bg-dark2 border border-gold/10 rounded-2xl;
+  }
+  .stat-card {
+    @apply bg-dark2 border border-gold/10 rounded-xl p-4;
+  }
+  .tbl-hdr {
+    @apply grid px-4 py-2.5 border-b border-gold/10 text-xs text-muted uppercase tracking-widest;
+  }
+  .tbl-row {
+    @apply grid px-4 py-3.5 border-b border-gold/5 items-center transition-colors hover:bg-gold/[0.02];
+  }
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl cursor-pointer transition-all text-muted hover:text-cream hover:bg-gold/5 text-sm font-medium;
+  }
+  .nav-item.active {
+    @apply bg-gold/10 text-gold;
+  }
+  .inp-label {
+    @apply text-xs text-muted uppercase tracking-widest mb-1.5 block;
+  }
+  .field { @apply mb-4; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.35s ease forwards; }

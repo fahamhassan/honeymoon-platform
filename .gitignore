@@ -1,0 +1,39 @@
+# Dependency directories
+**/node_modules/
+
+# Build outputs
+**/dist/
+**/build/
+**/.next/
+**/out/
+*.apk
+*.aab
+
+# Local environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Mobile specific
+**/.gradle/
+**/android/app/build/
+**/android/local.properties
+**/ios/Pods/
+**/ios/build/
+
+# Project specific
+start-all.ps1
+C:/bld/
