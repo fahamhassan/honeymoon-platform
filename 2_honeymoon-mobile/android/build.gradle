@@ -22,7 +22,11 @@ buildscript {
 apply plugin: "com.facebook.react.rootproject"
 
 allprojects {
-    buildDir = "C:/bld/HoneyMoonApp/${project.name}"
+    // Only redirect build dir for library sub-projects, NOT for :app
+    // This prevents a cross-drive path conflict in the JS bundler
+    if (project.name != "app") {
+        buildDir = "C:/bld/HoneyMoonApp/${project.name}"
+    }
     configurations.all {
         resolutionStrategy {
             force 'androidx.core:core:1.12.0'
