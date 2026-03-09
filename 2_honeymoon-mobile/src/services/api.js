@@ -3,7 +3,7 @@ import { getAccessToken, getRefreshToken, saveTokens, clearSession } from './sto
 // ── Config ─────────────────────────────────────────────────────────────────────
 const BASE_URL = __DEV__
   ? 'http://10.0.2.2:5000/api/v1'           // local dev (Android Emulator)
-  : 'https://honeymoon-api.onrender.com/api/v1'; // production (Render placeholder)
+  : 'https://honeymoon-api-two.vercel.app/api/v1'; // production (Vercel)
 
 const TIMEOUT_MS = 12000;
 
